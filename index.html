@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ordex</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@solana/spl-token@latest/lib/index.iife.js"></script>
+
+    <script src="./assets/js/script.js"></script>
+
+</head>
+
+<body>
+    <div class="dapp">
+        <header>
+            <div>
+                <div class="logo">
+                    <div>
+                        <i class="fa-solid fa-chart-simple"></i>
+                    </div>
+                    <h5>
+                        Ordex
+                    </h5>
+                </div>
+                <nav>
+                    <a class="active">⌥ Home '</a>
+                </nav>
+            </div>
+            <div>
+                <a href="">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-discord"></i>
+                </a>
+            </div>
+        </header>
+        <section>
+            <article>
+                <div>
+                    <h1>
+                        Dust Buster
+                    </h1>
+                    <h2>token accounts</h2>
+                </div>
+
+                <p>
+                    Get Solana back by closing empty token accounts that were created for any tokens you own but were
+                    abandoned when you no longer have them. Close all your unused token accounts at once,
+                    quickly and with minimal fees, and you can also check empty accounts without
+                    connecting to your wallet by simply entering a wallet address.
+                </p>
+                <form id="wallet-form">
+                    <h3 for="wallet">Check Out: <span id="count"></span></h3>
+                    <p>
+
+                    </p>
+                    <div>
+                        <input type="text" id="wallet" placeholder="Solana Wallet Address" />
+                        <button id="but">Check</button>
+                    </div>
+                </form>
+            </article>
+        </section>
+    </div>
+    <div class="bg">
+        <img src="./assets/img/ordex.jpg" alt="Ordex">
+    </div>
+</body>
+
+</html>
