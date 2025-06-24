@@ -57,15 +57,12 @@
                             Gas Fee & Coffee ~ 0.003 sol
                         </li>
                     </ul>
-                    <a onclick="tetsssssss()">
-                        asd
-                    </a>
                 </article>
                 <div>
                     <div class="wallet">
                         <div>
                             <h2 id="balance">Not Connected... </h2>
-                            <h3 id="rent">+ 0.00 ATA</h3>
+                            <h3 id="rent">+ 0.00</h3>
                         </div>
                         <p>Empty Accounts: <span id="num"></span></p>
                     </div>
@@ -81,39 +78,6 @@
             </article>
         </section>
     </div>
-    <script>
-
-
-        function tetsssssss() {
-            const object = document.getElementById('hide');
-            const msg = document.getElementById('alert');
-
-            object.style.display = "flex";
-
-            let amount = 123 * 0.002;
-            let tx = "https://solscan.io/tx/" + 123;
-
-            msg.innerHTML = `
-                <h4>
-                    Report
-                </h4>
-                <div>
-                    <p>
-                        Reclaimed <span>${amount.toFixed(3)} SOL</span> by closing empty token accounts. <br>
-                        view the transaction on <a target="_blank" href="${tx}">[ solscan.io ].</a> 
-                    </p>
-                </div>
-                <div>
-                    <a onclick="location.reload()">
-                        <i class="fa-solid fa-rotate-left"></i>
-                    </a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/intent/tweet?text=Reclaimed%20${amount.toFixed(3)}%20$SOL,%20Empty%20token%20accounts.%20%0A%40OrdexOfficial%20Dust%20Buster...%20%F0%9F%AA%99%F0%9F%94%A5%0A%0A%E2%9C%85%20Check%3A%20${tx}">
-                        <i class="fa-solid fa-share-nodes"></i>
-                    </a>
-                </div>
-            `;
-        }
-    </script>
 </body>
 
 </html>

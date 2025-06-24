@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
         document.getElementById("balance").textContent = balanceSol.toFixed(4) + " Sol";
 
-        document.getElementById("rent").innerHTML = "+ " + total * 0.002 + " ATA";
+        document.getElementById("rent").innerHTML = "+ " + total * 0.002;
 
         document.getElementById("num").innerHTML = total;
 

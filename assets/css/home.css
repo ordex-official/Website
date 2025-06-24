@@ -46,7 +46,7 @@ section>div>div {
 
     font-size: 0.75rem;
 
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
 }
