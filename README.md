@@ -26,5 +26,3 @@ To find vacant accounts tied to your wallet, simply enter your wallet address on
 #### 🤔 How to Use This Tool:
 
 To close empty token accounts (up to 50 at once), you need to connect your wallet using Phantom. After connecting, you will be able to review your wallet address, your current balance, and the total number of empty token accounts associated with your wallet. Once you review this information, you can approve and pay a minimal gas and service fee, the lowest fee in the ecosystem, charged only for tracking. After the process completes, locked solana in those accounts will be returned to your wallet and you will receive a report showing the total amount of SOL recovered and a transaction signature (TX) link so you can verify the transaction details on Solscan.
-
-# Website Ordex.lol

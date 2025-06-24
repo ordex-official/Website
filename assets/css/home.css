@@ -181,9 +181,10 @@ form span {
     font-weight: 900;
 }
 
-.lin button {
+.lin a {
 
     justify-content: center;
+    color: #000;
 
     background: var(--solid);
 
