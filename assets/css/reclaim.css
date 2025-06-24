@@ -1,0 +1,287 @@
+header>div:last-child>button {
+    font-size: 0.85rem;
+    cursor: pointer;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    color: #000;
+    background: var(--solid);
+    border-radius: 10px;
+
+    border: none;
+
+    font-weight: 900;
+
+    height: 3rem;
+    width: 12rem;
+}
+
+header>div:last-child>button:disabled {
+    cursor: default;
+}
+
+body {
+    padding: 1rem;
+}
+
+.dapp {
+    grid-template-rows: max-content calc(100% - (8rem + 2px));
+    gap: 1rem;
+}
+
+header {
+    padding: 2rem;
+    border: 1px solid #303030;
+    border-radius: 15px;
+}
+
+section {
+    display: grid;
+    grid-template-columns: auto 70%;
+    gap: 1rem;
+
+    height: 100%;
+}
+
+section > article {
+    border: 1px solid #303030;
+    border-radius: 15px;
+    padding: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+#alert {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#alert>i {
+    font-size: 8rem;
+    opacity: 0.1;
+}
+
+#alert h4 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+
+}
+
+
+#alert span,
+#alert a {
+    color: var(--solid);
+    font-weight: 900;
+}
+
+#alert>div:last-child {
+
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#alert>div:last-child a {
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--solid);
+    color: #000;
+}
+
+#alert>div:last-child a:hover {
+    opacity: 1;
+}
+
+
+.container {
+    border: 1px solid #303030;
+    border-radius: 15px;
+
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    font-size: 0.75rem;
+
+}
+
+.container>div {
+
+    display: grid;
+    grid-template-rows: calc(100% - 4rem) 3rem;
+
+    height: 50%;
+    gap: 1rem;
+}
+
+.container>article {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+.wallet {
+
+    border-radius: 15px;
+    border: 1px solid #303030;
+    background: var(--solid);
+    color: #000;
+    padding: 1rem 1.25rem;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.wallet h2 {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.wallet h3 {
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+.container h1 {
+    font-size: 2rem;
+    color: var(--solid);
+    font-weight: 900;
+}
+
+.container ul {
+    display: flex;
+    flex-direction: column;
+    font-weight: 900;
+    gap: 0.5rem;
+}
+
+.container button {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    cursor: pointer;
+
+    color: #000;
+    background: var(--solid);
+    border-radius: 10px;
+    border: none;
+    font-weight: 900;
+
+    height: 3rem;
+    width: 100%;
+}
+
+
+
+
+
+@media only screen and (max-width: 480px) {
+
+    .dapp {
+        grid-template-rows: max-content calc(100% - 4rem );
+        gap: 1rem;
+    }
+
+    header > div:last-child>a {
+        display: none;
+    }
+
+    header > div:last-child>button {
+
+        width: 9rem;
+
+    }
+
+    body {
+        padding: 2rem 1rem;
+    }
+
+    header {
+        border: 0;
+        padding: 0;
+    }
+
+    .container {
+        padding: 0;
+        border: none;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+
+        height: 100%;
+        position: relative;
+    }
+
+    section .wallet h2 {
+        font-size: 1.5rem;
+    }
+
+    section > div {
+        height: 100%;
+    } 
+
+    section > article {
+        height: 100%;
+        width: 100%;
+
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+
+        border: none;
+
+        background: #101010;
+        display: none;
+    }    
+    
+    section > article p {
+        font-size: 3vw;
+    }
+
+    #alert > i {
+        font-size: 3rem;
+        opacity: 0.1;
+    }
+
+}

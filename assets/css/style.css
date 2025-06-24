@@ -4,6 +4,8 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Manrope";
+
+    user-select: none;
 }
 
 :root {
@@ -36,36 +38,9 @@ body {
     height: 100%;
 }
 
-.bg {
-    position: absolute;
-    z-index: -10;
 
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
 
-    width: 100%;
-    height: 100%;
 
-    display: flex;
-}
-
-.bg>img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    display: block;
-
-    position: absolute;
-    opacity: 0.75;
-    top: 0;
-    z-index: -10;
-
-    right: 0;
-
-}
 
 
 header {
@@ -75,7 +50,7 @@ header {
 
     width: 100%;
     height: max-content;
-
+    border: 1px solid transparent;
 }
 
 header>div:first-child {
@@ -145,6 +120,7 @@ header .logo div {
 
     body {
         padding: 2rem 1rem;
+        height: 100dvh;
     }
 
     body section {
