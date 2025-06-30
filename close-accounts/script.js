@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const connectBtn = document.getElementById("connect-button");
     const connection = new Connection("https://solana-rpc.publicnode.com", "confirmed");
 
-    const fee = Math.floor(0.003 * LAMPORTS_PER_SOL);
+    const fee = Math.floor(0.0001 * LAMPORTS_PER_SOL);
     const coffee = new PublicKey("G4o9SvD8ad2CTpK63NufWxLWA1oox2pbTjN32UaCz6bS");
 
     if (window.solana) {
@@ -181,8 +181,3 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 
 });
-
-
-/* 
-    const connection = new Connection("https://api.devnet.solana.com", "confirmed");
-*/

@@ -22,7 +22,7 @@ section>div {
 
 section>div h4 {
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--solid);
 
     animation: palse 1s infinite;
@@ -43,10 +43,9 @@ section>div h4 {
 }
 
 section>div>div {
-
+    text-align: center;
     font-size: 0.75rem;
 
-    display: none;
     flex-direction: column;
     align-items: center;
 }
