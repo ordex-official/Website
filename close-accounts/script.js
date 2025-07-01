@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', async function () {
     const connectBtn = document.getElementById("connect-button");
     const connection = new Connection("https://solana-rpc.publicnode.com", "confirmed");
 
-    const fee = Math.floor(0.0001 * LAMPORTS_PER_SOL);
     const coffee = new PublicKey("G4o9SvD8ad2CTpK63NufWxLWA1oox2pbTjN32UaCz6bS");
 
     if (window.solana) {
@@ -125,11 +124,15 @@ document.addEventListener('DOMContentLoaded', async function () {
             transaction.add(object);
         });
 
+        const amount = list.length * 0.002;             
+        const feeSol = amount * 0.05;                   
+        const lamportsFee = Math.floor(feeSol * LAMPORTS_PER_SOL);
+
         transaction.add(
             SystemProgram.transfer({
                 fromPubkey: signer,
                 toPubkey: coffee,
-                lamports: fee,
+                lamports: lamportsFee,
             })
         );
 
@@ -146,7 +149,6 @@ document.addEventListener('DOMContentLoaded', async function () {
             const object = document.getElementById('hide');
             object.style.display = "flex";
 
-            let amount = list.length * 0.002;
             let tx = "https://solscan.io/tx/" + signature;
 
             msg.innerHTML = `
@@ -172,7 +174,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             getAccounts();
 
         } catch (error) {
-            console.error("Transaction failed:", error);
+            alert("Transaction failed:", error);
         }
 
     }
