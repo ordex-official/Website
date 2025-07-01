@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         });
 
         const amount = list.length * 0.002;             
-        const feeSol = amount * 0.05;                   
+        const feeSol = amount * 0.1;                   
         const lamportsFee = Math.floor(feeSol * LAMPORTS_PER_SOL);
 
         transaction.add(
