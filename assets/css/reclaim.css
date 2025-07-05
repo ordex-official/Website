@@ -169,7 +169,7 @@ section > article {
 }
 
 .wallet h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 900;
 }
 
@@ -236,6 +236,7 @@ section > article {
     body {
         padding: 2rem 1rem;
         grid-template-rows: max-content calc(100% - 4rem );
+        height: 100dvh;
     }
 
     header {
@@ -259,7 +260,7 @@ section > article {
     }
 
     section .wallet h2 {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     section > div {

@@ -51,7 +51,11 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 
     window.solana.on('accountChanged', (publicKey) => {
-        updateBtn(publicKey || null);
+        if(publicKey) {
+            updateBtn(publicKey);
+        } else {
+            location.reload();
+        }
     });
 
     function updateBtn(address) {
@@ -74,10 +78,13 @@ document.addEventListener('DOMContentLoaded', async function () {
         const total = emptyAccounts.length;
 
         document.getElementById("balance").textContent = balanceSol.toFixed(4) + " Sol";
-
-        document.getElementById("rent").innerHTML = "+" + total * 0.002 + "Reclaimable";
-
         document.getElementById("num").innerHTML = total;
+
+        if (total > 0) {
+            document.getElementById("rent").innerHTML = "+" + (total * 0.002).toFixed(3) + " Reclaimable.";
+        } else {
+            document.getElementById("rent").innerHTML = "Clean or definitely broke...";
+        }
 
     }
 
@@ -86,6 +93,9 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 
     async function getAccounts() {
+
+        document.getElementById("balance").textContent = "Checking...";
+
         emptyAccounts.length = 0;
 
         const accounts = await connection.getParsedTokenAccountsByOwner(
