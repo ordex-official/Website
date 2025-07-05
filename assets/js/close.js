@@ -27,7 +27,13 @@ document.addEventListener('DOMContentLoaded', async function () {
         connectBtn.disabled = true;
         connectBtn.textContent = "Not Found";
 
-        alert("Please install the Phantom wallet to use this tool.");
+        const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
+        if (isMobile) {
+            alert("Use Phantom's browser inside application on your mobile device.");
+        } else {
+            alert("Please install the Phantom Wallet Extension in your browser.");
+        }
 
         return;
 
@@ -69,7 +75,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
         document.getElementById("balance").textContent = balanceSol.toFixed(4) + " Sol";
 
-        document.getElementById("rent").innerHTML = "+ " + total * 0.002;
+        document.getElementById("rent").innerHTML = "+" + total * 0.002 + "Reclaimable";
 
         document.getElementById("num").innerHTML = total;
 

@@ -7,82 +7,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Clean your Solana wallet by burning worthless tokens and closing empty associated token accounts to reclaim your SOL rent fees.">
-    <meta name="keywords" content="Solana, SPL token, recover, token burning, token accounts, wallet cleanup, ATA, reclaim rent, wallet, empty token accounts">
-
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/home.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 
     <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@solana/spl-token@latest/lib/index.iife.js"></script>
-
-    <script src="./assets/js/script.js"></script>
-
+    <script src="./assets/js/check.js"></script>
 </head>
 
 <body>
-    <div class="dapp">
-        <header>
-            <div>
-                <div class="logo">
-                    <div>
-                        <i class="fa-solid fa-chart-simple"></i>
-                    </div>
-                    <h5>
-                        Ordex
-                    </h5>
-                </div>
-                <nav>
-                    <a class="active">⌥ Home '</a>
-                    <a href="./close-accounts/">⌥ Reclaim Rent ''</a>
-                </nav>
-            </div>
-            <div>
-                <a href="https://x.com/OrdexOfficial">
-                    <i class="fa-brands fa-twitter"></i>
-                </a>
-                <a href="https://discord.gg/B6PGsf3WyT">
-                    <i class="fa-brands fa-discord"></i>
-                </a>
-            </div>
-        </header>
-        <section>
-            <article>
+    <header>
+        <div>
+            <div class="logo">
                 <div>
-                    <h1>
-                        Dust Buster 
-                    </h1>
-                    <h2>token accounts</h2>
+                    <i class="fa-solid fa-chart-simple"></i>
                 </div>
-
+                <h5>
+                    Ordex
+                </h5>
+            </div>
+            <nav>
+                <a class="active">⌥ Home '</a>
+                <a href="./close-accounts/">⌥ Reclaim Rent ''</a>
+            </nav>
+        </div>
+        <div>
+            <a href="https://x.com/OrdexOfficial">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://discord.gg/B6PGsf3WyT">
+                <i class="fa-brands fa-discord"></i>
+            </a>
+        </div>
+    </header>
+    <section>
+        <article>
+            <div>
+                <a href="./close-accounts/">
+                    <h1>Dust Buster</h1> <i class="fa-solid fa-up-right-from-square"></i>
+                </a>
+                <h2>
+                    Token Accounts
+                </h2>
+            </div>
+            <div>
                 <p>
-                    Get Solana back by closing empty token accounts that were created for any tokens you own but were
-                    abandoned when you no longer have them, and you can also check empty accounts without
+                    Get <b>Solana</b> back by closing empty token accounts that were created for any tokens you own but
+                    were abandoned when you no longer have them, and you can also check empty accounts without
                     connecting to your wallet by simply entering a wallet address.
                 </p>
-                <form id="wallet-form">
-                    <h3 for="wallet">Check Out: <span id="count"></span></h3>
-                    <p>
-
-                    </p>
-                    <div>
-                        <input type="text" id="wallet" placeholder="Solana Wallet Address" />
-                        <button id="but">Check</button>
-                    </div>
-                </form>
-                <div class="lin">
-                    <p>
-                        Fast, Easy, Low Fees...
-                    </p>
-                    <a href="./close-accounts/">
-                        LET'Z GO !?
-                    </a>
+            </div>
+            <div class="check">
+                <h3>
+                    Check Out:<span id="count"></span>
+                </h3>
+                <div>
+                    <input type="text" id="wallet" placeholder="Solana Wallet Address" />
+                    <button id="check-button">Check</button>
                 </div>
-
-            </article>
-            <div>
+            </div>
+            <div class="num">
                 <div>
                     <h4>0.097</h4>
                     <p>
@@ -90,11 +74,16 @@
                     </p>
                 </div>
             </div>
-        </section>
-    </div>
-    <div class="bg">
-        <img src="./assets/img/ordex.jpg" alt="Ordex">
-    </div>
+            <div class="lin">
+                <p>
+                    Reclaim Rent.
+                </p>
+                <a href="./close-accounts/">
+                    LET'Z GO !?
+                </a>
+            </div>
+        </article>
+    </section>
 </body>
 
 </html>

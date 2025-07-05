@@ -15,69 +15,68 @@
     <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@solana/spl-token@latest/lib/index.iife.js"></script>
 
-    <script src="script.js"></script>
+    <script src="../assets/js/close.js"></script>
 
 </head>
 
 <body>
-    <div class="dapp">
-        <header>
-            <div>
-                <a href="../" class="logo">
-                    <div>
-                        <i class="fa-solid fa-chart-simple"></i>
-                    </div>
-                    <h5>
-                        Ordex
-                    </h5>
-                </a>
-                <nav>
-                    <a href="../">⌥ Home '</a>
-                    <a class="active">⌥ Reclaim Rent ''</a>
-                </nav>
+    <header>
+        <div>
+            <div class="logo">
+                <div>
+                    <i class="fa-solid fa-chart-simple"></i>
+                </div>
+                <h5>
+                    Ordex
+                </h5>
             </div>
+            <nav>
+                <a href="../">⌥ Home '</a>
+                <a class="active">⌥ Reclaim Rent ''</a>
+            </nav>
+        </div>
+        <div>
+            <button id="connect-button">
+                Connect Wallet
+            </button>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <article>
+                <h1>Clean Up</h1>
+                <p>
+                    Each associated token account holds approximately ~<b>0.002 Sol</b>,
+                    and this feature finds and closes only empty token accounts that previously held tokens,
+                    reclaiming the solana reserved as rent.
+                </p>
+                <ul>
+                    <li>Closing up to 50 empty accounts at once.</li>
+                    <li>
+                        Gas Fee & Coffee ~ 0.00008 + 5% Rent
+                    </li>
+                </ul>
+            </article>
             <div>
-                <button id="connect-button">
-                    Connect Wallet
+                <div class="wallet">
+                    <div>
+                        <h2 id="balance">No Connect</h2>
+                        <h3 id="rent">+0.000 Reclaimable</h3>
+                    </div>
+                    <p>Empty Accounts: <span id="num"></span></p>
+                </div>
+                <button id="claim">
+                    Reclaim & Close Accounts
                 </button>
             </div>
-        </header>
-        <section>
-            <div class="container">
-                <article>
-                    <h1>Clean Up</h1>
-                    <p>
-                        Each associated token account holds approximately ~<b>0.002 Sol</b>,
-                        and this feature finds and closes only empty token accounts that previously held tokens,
-                        reclaiming the solana reserved as rent.
-                    </p>
-                    <ul>
-                        <li>Closing up to 50 empty accounts at once.</li>
-                        <li>
-                            Gas Fee & Coffee ~ 0.00008 + 5% Rent
-                        </li>
-                    </ul>
-                </article>
-                <div>
-                    <div class="wallet">
-                        <div>
-                            <h2 id="balance">Not Connected... </h2>
-                            <h3 id="rent">+ 0.00</h3>
-                        </div>
-                        <p>Empty Accounts: <span id="num"></span></p>
-                    </div>
-                    <button id="claim">
-                        Reclaim & Close Accounts
-                    </button>
-                </div>
+        </div>
+        <article id="hide">
+            <div id="alert">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
             </div>
-            <article id="hide">
-                <div id="alert">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i>
-                </div>
-            </article>
-        </section>
-    </div>
+        </article>
+    </section>
 </body>
 
 </html>
