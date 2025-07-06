@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "Manrope";
+}
+
+html, body {
+    margin: 0;
+}
+
+:root {
+    --go: #303030;
+    --co: #DDF247;
+
+    --background: #101010;
+    --solid: #FFF;
+}
+
+body {
+    height: 100vh;
+    background: var(--background);
+    color: var(--solid);
+    display: flex;
+}
+
+h1, h2 {
+    color: var(--co);
+}
+
+a {
+    color: var(--co);
+    text-decoration: none;
+}
+
+p {
+    font-weight: 200;
+}
+
+.navi {
+    width: 25%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: 12% auto;
+}
+
+.navi nav {
+    border-right: 1px solid var(--go);
+}
+
+.navi > div {
+    border-bottom: 1px solid var(--go);
+    display: flex;
+    align-items: center;
+    padding: 0 1.25rem;
+}
+
+.navi a {
+
+    width: max-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2rem;
+    font-weight: 900;
+
+}
+
+
+
+
+
+
+
+/* ****************************************** */
+
+
+.content {
+    position: relative;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+header {
+    border-bottom: 1px solid var(--go);
+
+    position: sticky;
+    width: 100%;
+    height: 12%;
+    top: 0;
+
+    background: #101010;
+    box-shadow: 0 10px 50px 0 #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+header > div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header button, header > div:last-child a {
+    background: none;
+    color: var(--co);
+    border: 1px solid var(--go);
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: border 0.75s;
+}
+
+header > div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header button:hover, header input:hover, header > div:last-child a:hover {
+    border: 1px solid #FFF;
+}
+
+header input {
+    background: none;
+    border: 1px solid var(--go);
+    border-radius: 5px;
+    color: #FFF;
+    padding: 0 1rem;
+    height: 38px;
+    transition: border 0.75s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main {
+    margin-top: auto;
+    padding: 2rem;
+}
