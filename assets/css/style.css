@@ -18,6 +18,7 @@ a {
 body {
     background-color: #101010;
     color: #FFF;
+    height: 100vh;
     font-size: 1rem;
 }
 
@@ -97,14 +98,13 @@ header nav a:hover {
     cursor: default;
 }
 
-header>div:last-child {
+header .links {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
-header>div:last-child a,
-header .logo div {
+header .links a, header .logo div {
     justify-content: center;
     align-items: center;
     display: flex;
@@ -119,11 +119,11 @@ header .logo div {
     width: 3rem;
 }
 
-header > div:last-child a {
+header .links a {
     transition: all 0.25s;
 }
 
-header > div:last-child a:hover {
+header .links a:hover {
     transform: scale(1.1);
 }
 
@@ -134,21 +134,20 @@ header .logo div {
 
 
 
-
-
 @media only screen and (max-width: 480px) {
 
-    header {
-        position: unset;
-        padding: 0;
+    body {
+        height: 100dvh;
     }
 
-    header nav, .num {
+    header nav {
         display: none;
     }
 
-    header>div:last-child a i{
-        font-size: 5vw;
+    header {
+        padding: 1rem;
     }
 
-}
+
+
+}   

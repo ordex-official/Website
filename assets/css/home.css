@@ -4,7 +4,6 @@ body {
     background-position: right;
     background-size: cover;
     padding: 3rem;
-    height: 100vh;
 }
 
 
@@ -188,7 +187,7 @@ section .check > div {
     }
 
     section {
-        justify-content: start;
+        justify-content: center;
     }
 
     section article {
