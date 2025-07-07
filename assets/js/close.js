@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             return;
         }
 
-        const list = emptyAccounts.slice(0, 50);
+        const list = emptyAccounts.slice(0, 25);
 
         const transaction = new Transaction();
 
